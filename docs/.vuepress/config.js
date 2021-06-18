@@ -4,6 +4,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
+  base: '/never-more-sound/',
   markdown: {
     lineNumbers: true // 代码块显示行号
   },
@@ -12,42 +13,39 @@ module.exports = {
     lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
     // 顶部栏目
     nav: [
-      { text: '算法', link: '/algorithm/' }, // 内部链接 以docs为根目录
-      { text: '博客', link: 'http://obkoro1.com/' }, // 外部链接
+      { text: '算法', link: '/algorithm/t1' }, // 内部链接 以docs为根目录
+      { text: '掘金', link: 'https://juejin.cn/user/2700056287256382/posts' }, // 外部链接
       // 下拉列表
       {
         text: 'GitHub',
         items: [
-          { text: 'GitHub地址', link: 'https://github.com/OBKoro1' },
+          { text: 'GitHub', link: 'https://github.com/kv321vk/never-more-sound.git' },
           {
             text: '算法仓库',
-            link: 'https://github.com/OBKoro1/Brush_algorithm'
+            link: 'https://www.baidu.com'
           }
         ]
       }
     ],
     // 侧边栏
     sidebar: {
-      // docs文件夹下面的accumulate文件夹 文档中md文件 书写的位置(命名随意)
-      '/accumulate/': [
-        '/accumulate/', // accumulate文件夹的README.md 不是下拉框形式
+      '/guide/': [
+        '/guide/',
         {
-          title: '侧边栏下拉框的标题1',
+          title: '组1',
           children: [
-            '/accumulate/test', // 以docs为根目录来查找文件 
-            // 上面地址查找的是：docs>accumulate>test.md 文件
-            // 自动加.md 每个子选项的标题 是该md文件中的第一个h1/h2/h3标题
-            '/accumulate/test2'
+            '/guide/test',
+            '/guide/test2'
           ]
         }
       ],
-      // docs文件夹下面的algorithm文件夹 这是第二组侧边栏 跟第一组侧边栏没关系
       '/algorithm/': [
         '/algorithm/',
         {
-          title: '第二组侧边栏下拉框的标题1',
+          title: '组2',
           children: [
-            '/algorithm/simple/test'
+            '/algorithm/t1',
+            '/algorithm/t2'
           ]
         }
       ]
